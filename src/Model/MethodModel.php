@@ -1,17 +1,17 @@
 <?php
 
-namespace Krlove\CodeGenerator\Model;
+namespace JonathanGuo\CodeGenerator\Model;
 
-use Krlove\CodeGenerator\Exception\ValidationException;
-use Krlove\CodeGenerator\Model\Traits\AbstractModifierTrait;
-use Krlove\CodeGenerator\Model\Traits\AccessModifierTrait;
-use Krlove\CodeGenerator\Model\Traits\DocBlockTrait;
-use Krlove\CodeGenerator\Model\Traits\FinalModifierTrait;
-use Krlove\CodeGenerator\Model\Traits\StaticModifierTrait;
+use JonathanGuo\CodeGenerator\Exception\ValidationException;
+use JonathanGuo\CodeGenerator\Model\Traits\AbstractModifierTrait;
+use JonathanGuo\CodeGenerator\Model\Traits\AccessModifierTrait;
+use JonathanGuo\CodeGenerator\Model\Traits\DocBlockTrait;
+use JonathanGuo\CodeGenerator\Model\Traits\FinalModifierTrait;
+use JonathanGuo\CodeGenerator\Model\Traits\StaticModifierTrait;
 
 /**
  * Class PHPClassMethod
- * @package Krlove\CodeGenerator\Model
+ * @package JonathanGuo\CodeGenerator\Model
  */
 class MethodModel extends BaseMethodModel
 {

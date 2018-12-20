@@ -1,10 +1,10 @@
 <?php
 
-namespace Krlove\CodeGenerator\Model\Traits;
+namespace JonathanGuo\CodeGenerator\Model\Traits;
 
 /**
  * Trait PHPValueTrait
- * @package Krlove\CodeGenerator\Model\Traits
+ * @package JonathanGuo\CodeGenerator\Model\Traits
  */
 trait ValueTrait
 {
@@ -51,29 +51,29 @@ trait ValueTrait
 
         switch ($type) {
             case 'boolean':
-                $value = $value ? 'true' : 'false';
-
-                break;
+                return $value ? 'true' : 'false';
             case 'int':
-                // do nothing
-
-                break;
+                return $value;
             case 'string':
-                $value = sprintf('\'%s\'', addslashes($value));
-
-                break;
+                return sprintf('\'%s\'', addslashes($value));
             case 'array':
                 $parts = [];
                 foreach ($value as $item) {
                     $parts[] = $this->renderTyped($item);
                 }
-                $value = '[' . implode(', ', $parts) . ']';
 
-                break;
+                // Always break into multiple lines and add trailing comma if there are more than 3 items
+                if (count($parts) <= 3) {
+                    return sprintf('[%s]', implode(', ', $parts));
+                }
+
+                return '[' . PHP_EOL
+                    . implode(',' . PHP_EOL, $parts)
+                    // Always add trailing comma and line break
+                    . ',' . PHP_EOL
+                    . ']';
             default:
-                $value = null; // TODO: how to render null explicitly?
+                return null; // TODO: how to render null explicitly?
         }
-
-        return $value;
     }
 }

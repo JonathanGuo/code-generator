@@ -1,12 +1,12 @@
 <?php
 
-namespace Krlove\CodeGenerator;
+namespace JonathanGuo\CodeGenerator;
 
-use Krlove\CodeGenerator\Exception\GeneratorException;
+use JonathanGuo\CodeGenerator\Exception\GeneratorException;
 
 /**
  * Class RenderableModel
- * @package Krlove\CodeGenerator
+ * @package JonathanGuo\CodeGenerator
  */
 abstract class RenderableModel implements RenderableInterface, LineableInterface
 {
@@ -23,8 +23,9 @@ abstract class RenderableModel implements RenderableInterface, LineableInterface
         }
 
         if ($indent > 0) {
-            array_walk($lines, function (&$item) use ($indent) {
-                $item = str_repeat(' ', $indent) . $item;
+            $indentStr = str_repeat(' ', $indent);
+            array_walk($lines, function (&$item) use ($indentStr) {
+                $item = $indentStr . str_replace(PHP_EOL, PHP_EOL . str_repeat($indentStr, 2), $item);
             });
         }
 

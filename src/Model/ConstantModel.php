@@ -1,13 +1,13 @@
 <?php
 
-namespace Krlove\CodeGenerator\Model;
+namespace JonathanGuo\CodeGenerator\Model;
 
-use Krlove\CodeGenerator\Model\Traits\ValueTrait;
-use Krlove\CodeGenerator\RenderableModel;
+use JonathanGuo\CodeGenerator\Model\Traits\ValueTrait;
+use JonathanGuo\CodeGenerator\RenderableModel;
 
 /**
  * Class PHPClassConstant
- * @package Krlove\CodeGenerator\Model
+ * @package JonathanGuo\CodeGenerator\Model
  */
 class ConstantModel extends RenderableModel
 {

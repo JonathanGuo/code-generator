@@ -1,12 +1,12 @@
 <?php
 
-namespace Krlove\CodeGenerator\Model;
+namespace JonathanGuo\CodeGenerator\Model;
 
-use Krlove\CodeGenerator\RenderableModel;
+use JonathanGuo\CodeGenerator\RenderableModel;
 
 /**
  * Class BaseProperty
- * @package Krlove\CodeGenerator\Model
+ * @package JonathanGuo\CodeGenerator\Model
  */
 abstract class BasePropertyModel extends RenderableModel
 {

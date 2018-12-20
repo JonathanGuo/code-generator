@@ -1,10 +1,10 @@
 <?php
 
-namespace Krlove\CodeGenerator\Model\Traits;
+namespace JonathanGuo\CodeGenerator\Model\Traits;
 
 /**
  * Trait AbstractModifierTrait
- * @package Krlove\CodeGenerator\Model\Traits
+ * @package JonathanGuo\CodeGenerator\Model\Traits
  */
 trait AbstractModifierTrait
 {

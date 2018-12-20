@@ -1,26 +1,31 @@
-# Code generator
+## Why I created another generator?
+This package is a shameless copy of [krlove/code-generator](https://github.com/krlove/code-generator). It does the job but looks like the author is not actively maintaining the package any longer.
+When I cloned the repo on 20th December 2018, there is an issue and two PRs are not responded since 2017.
 
+Also another reason is I need the code generator to generate some code with custom styles. The requirements might not be general cares. So I decided to duplicate the repo rather than fork it.   
+
+# Code generator
 Code generator is a PHP tool that provides an interface for generating code. Currently only PHP class generation is supported.
 
 ## Installation
-Require the package using composer `composer require krlove/code-generator --dev`. Code generator is usually intended to be installed only in dev environment. Installation in prod environment is not recommended.
+Require the package using composer `composer require jonathanguo/code-generator --dev`. Code generator is usually intended to be installed only in dev environment. Installation in prod environment is not recommended.
 
 ## Usage example
 ```php
 <?php
 
-use Krlove\CodeGenerator\Model\ArgumentModel;
-use Krlove\CodeGenerator\Model\ClassModel;
-use Krlove\CodeGenerator\Model\ConstantModel;
-use Krlove\CodeGenerator\Model\ClassNameModel;
-use Krlove\CodeGenerator\Model\DocBlockModel;
-use Krlove\CodeGenerator\Model\MethodModel;
-use Krlove\CodeGenerator\Model\NamespaceModel;
-use Krlove\CodeGenerator\Model\PropertyModel;
-use Krlove\CodeGenerator\Model\UseTraitModel;
-use Krlove\CodeGenerator\Model\UseClassModel;
-use Krlove\CodeGenerator\Model\VirtualMethodModel;
-use Krlove\CodeGenerator\Model\VirtualPropertyModel;
+use JonathanGuo\CodeGenerator\Model\ArgumentModel;
+use JonathanGuo\CodeGenerator\Model\ClassModel;
+use JonathanGuo\CodeGenerator\Model\ConstantModel;
+use JonathanGuo\CodeGenerator\Model\ClassNameModel;
+use JonathanGuo\CodeGenerator\Model\DocBlockModel;
+use JonathanGuo\CodeGenerator\Model\MethodModel;
+use JonathanGuo\CodeGenerator\Model\NamespaceModel;
+use JonathanGuo\CodeGenerator\Model\PropertyModel;
+use JonathanGuo\CodeGenerator\Model\UseTraitModel;
+use JonathanGuo\CodeGenerator\Model\UseClassModel;
+use JonathanGuo\CodeGenerator\Model\VirtualMethodModel;
+use JonathanGuo\CodeGenerator\Model\VirtualPropertyModel;
 
 require 'vendor/autoload.php';
 

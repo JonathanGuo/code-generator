@@ -1,10 +1,10 @@
 <?php
 
-namespace Krlove\CodeGenerator\Exception;
+namespace JonathanGuo\CodeGenerator\Exception;
 
 /**
  * Class ValidationException
- * @package Krlove\CodeGenerator\Exception
+ * @package JonathanGuo\CodeGenerator\Exception
  */
 class ValidationException extends \Exception
 {

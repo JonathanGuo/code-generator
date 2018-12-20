@@ -1,12 +1,12 @@
 <?php
 
-namespace Krlove\CodeGenerator\Model;
+namespace JonathanGuo\CodeGenerator\Model;
 
-use Krlove\CodeGenerator\RenderableModel;
+use JonathanGuo\CodeGenerator\RenderableModel;
 
 /**
  * Class DocBlockModel
- * @package Krlove\CodeGenerator\Model
+ * @package JonathanGuo\CodeGenerator\Model
  */
 class DocBlockModel extends RenderableModel
 {

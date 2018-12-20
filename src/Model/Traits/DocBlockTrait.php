@@ -1,12 +1,12 @@
 <?php
 
-namespace Krlove\CodeGenerator\Model\Traits;
+namespace JonathanGuo\CodeGenerator\Model\Traits;
 
-use Krlove\CodeGenerator\Model\DocBlockModel;
+use JonathanGuo\CodeGenerator\Model\DocBlockModel;
 
 /**
  * Trait DocBlockTrait
- * @package Krlove\CodeGenerator\Model\Traits
+ * @package JonathanGuo\CodeGenerator\Model\Traits
  */
 trait DocBlockTrait
 {

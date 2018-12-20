@@ -1,15 +1,15 @@
 <?php
 
-namespace Krlove\CodeGenerator\Model;
+namespace JonathanGuo\CodeGenerator\Model;
 
-use Krlove\CodeGenerator\Exception\ValidationException;
-use Krlove\CodeGenerator\Model\Traits\AbstractModifierTrait;
-use Krlove\CodeGenerator\Model\Traits\FinalModifierTrait;
-use Krlove\CodeGenerator\RenderableModel;
+use JonathanGuo\CodeGenerator\Exception\ValidationException;
+use JonathanGuo\CodeGenerator\Model\Traits\AbstractModifierTrait;
+use JonathanGuo\CodeGenerator\Model\Traits\FinalModifierTrait;
+use JonathanGuo\CodeGenerator\RenderableModel;
 
 /**
  * Class Name
- * @package Krlove\CodeGenerator\Model
+ * @package JonathanGuo\CodeGenerator\Model
  */
 class ClassNameModel extends RenderableModel
 {

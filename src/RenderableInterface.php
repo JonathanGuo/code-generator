@@ -1,10 +1,10 @@
 <?php
 
-namespace Krlove\CodeGenerator;
+namespace JonathanGuo\CodeGenerator;
 
 /**
  * Interface RenderableInterface
- * @package Krlove\CodeGenerator
+ * @package JonathanGuo\CodeGenerator
  */
 interface RenderableInterface
 {
