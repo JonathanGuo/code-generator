@@ -25,7 +25,11 @@ abstract class RenderableModel implements RenderableInterface, LineableInterface
         if ($indent > 0) {
             $indentStr = str_repeat(' ', $indent);
             array_walk($lines, function (&$item) use ($indentStr) {
-                $item = $indentStr . str_replace(PHP_EOL, PHP_EOL . str_repeat($indentStr, 2), $item);
+                $indent = str_repeat($indentStr, 2);
+                $item = $indentStr . str_replace(PHP_EOL, PHP_EOL . $indent, $item);
+
+                // If the item is end of multi-lines array, then replace the indent
+                $item = str_replace($indent . '];', $indentStr . '];', $item);
             });
         }
 
