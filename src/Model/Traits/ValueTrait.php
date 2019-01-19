@@ -58,8 +58,10 @@ trait ValueTrait
                 return sprintf('\'%s\'', addslashes($value));
             case 'array':
                 $parts = [];
-                foreach ($value as $item) {
-                    $parts[] = $this->renderTyped($item);
+                foreach ($value as $key => $item) {
+                    // Render associate keys if the key is not integer
+                    $keyStr = !is_int($key) ? sprintf("'%s' => ", $key) : '';
+                    $parts[] = $keyStr . $this->renderTyped($item);
                 }
 
                 // Always break into multiple lines and add trailing comma if there are more than 3 items
