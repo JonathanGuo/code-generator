@@ -50,6 +50,11 @@ class ClassModel extends RenderableModel
     protected $methods = [];
 
     /**
+     * @var bool
+     */
+    protected $generateClassDocBlock = true;
+
+    /**
      * {@inheritDoc}
      */
     public function toLines()
@@ -62,7 +67,11 @@ class ClassModel extends RenderableModel
         if (count($this->uses) > 0) {
             $lines[] = $this->renderArrayLn($this->uses);
         }
-        $this->prepareDocBlock();
+
+        if ($this->generateClassDocBlock) {
+            $this->prepareDocBlock();
+        }
+
         if ($this->docBlock !== null) {
             $lines[] = $this->docBlock->render();
         }
@@ -218,6 +227,14 @@ class ClassModel extends RenderableModel
         $this->methods[] = $method;
 
         return $this;
+    }
+
+    /**
+     * @param bool $generateDocBlock
+     */
+    public function setGenerateClassDocBlock(bool $generateDocBlock = true)
+    {
+        $this->generateClassDocBlock = $generateDocBlock;
     }
 
     /**
