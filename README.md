@@ -122,3 +122,10 @@ class TestClass extends BaseTestClass implements \NamespaceOne\InterfaceOne, Int
     }
 }
 ```
+
+If you don't want to generate class/properties DocBlock, you can turn it off by
+
+```php
+$phpClass->setGenerateClassDocBlock(false);
+```
+
